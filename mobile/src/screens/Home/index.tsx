@@ -1,4 +1,4 @@
-import { View, Image } from 'react-native';
+import { View, Image, FlatList } from 'react-native';
 
 import logoImg from '../../assets/logo-nlw-esports.png';
 import { GAMES } from '../../utils/games';
@@ -22,9 +22,18 @@ export function Home() {
         subTitle='Selecione o game que deseja jogar...'
       />
 
-    <GameCard
-      data={GAMES[0]}
-    />
+      <FlatList
+        data={GAMES}
+        horizontal
+        keyExtractor={item => item.id}
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={styles.contentList}
+        renderItem={({ item }) => (
+          <GameCard
+            data={item}
+          />
+        )}
+      />
 
     </View>
   );
