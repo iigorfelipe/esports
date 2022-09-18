@@ -6,6 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import logoImg from '../../assets/logo-nlw-esports.png';
 
 import { GameCard, GameCardProps } from '../../components/GameCard';
+import { Background } from '../../components/Background';
 import { Heading } from '../../components/Heading';
 
 import { styles } from './styles';
@@ -26,31 +27,34 @@ export function Home() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <Background>
+      <SafeAreaView style={styles.container}>
 
-      <Image
-        source={logoImg}
-        style={styles.logo}
-      />
+        <Image
+          source={logoImg}
+          style={styles.logo}
+        />
 
-      <Heading
-        title='Encontre seu duo!'
-        subTitle='Selecione o game que deseja jogar...'
-      />
+        <Heading
+          title='Encontre seu duo!'
+          subTitle='Selecione o game que deseja jogar...'
+        />
 
-      <FlatList
-        data={games}
-        horizontal
-        keyExtractor={item => item.id}
-        showsHorizontalScrollIndicator={false}
-        contentContainerStyle={styles.contentList}
-        renderItem={({ item }) => (
-          <GameCard
-            data={item}
-          />
-        )}
-      />
+        <FlatList
+          data={games}
+          horizontal
+          keyExtractor={item => item.id}
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={styles.contentList}
+          renderItem={({ item }) => (
+            <GameCard
+              data={item}
+              onPress={handleOpenGame}
+            />
+          )}
+        />
 
-    </SafeAreaView>
+      </SafeAreaView>
+    </Background>
   );
 }
