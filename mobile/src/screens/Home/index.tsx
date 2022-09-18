@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { Image, FlatList } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -17,6 +18,12 @@ export function Home() {
       .then((response) => response.json())
       .then((data) => setGames(data))
   }, []);
+
+  const navigation = useNavigation();
+
+  const handleOpenGame = () => {
+    navigation.navigate('game');
+  };
 
   return (
     <SafeAreaView style={styles.container}>
