@@ -2,8 +2,26 @@ import './styles/main.css';
 import logoImg from './assets/logo.svg';
 import GameBanner from './components/GameBanner';
 import CreateAdBanner from './components/AdBanner';
+import { useEffect, useState } from 'react';
+
+interface Game {
+  id: string;
+  title: string;
+  bannerUrl: string;
+  _count: {
+    ads: number;
+  }
+}
 
 const App = () => {
+  const [games, setGames] = useState<Game[]>([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/games')
+      .then((response) => response.json())
+      .then((data) => setGames(data))
+  }, []);
+
   return (
     <div className='max-w-7xl mx-auto flex flex-col items-center my-9'>
       <img src={logoImg} alt="" />
@@ -13,15 +31,19 @@ const App = () => {
       </h1>
 
       <div className='grid grid-cols-6 gap-6 mt-12'>
-        <GameBanner bannerUrl="/game-1.png" adsCount={4} title="League of Legends" />
-        <GameBanner bannerUrl="/game-2.png" adsCount={4} title="Dota 2" />
-        <GameBanner bannerUrl="/game-3.png" adsCount={4} title="Counter Strike" />
-        <GameBanner bannerUrl="/game-4.png" adsCount={4} title="Apex Legends" />
-        <GameBanner bannerUrl="/game-5.png" adsCount={4} title="Fortnite" />
-        <GameBanner bannerUrl="/game-6.png" adsCount={4} title="World of WarCraft" />
+        {
+          games.map(({ id, bannerUrl, title, _count: { ads } }) => (
+            <GameBanner
+              key={id}
+              bannerUrl={bannerUrl}
+              adsCount={ads}
+              title={title}
+            />
+          ))
+        }
       </div>
 
-      <CreateAdBanner />      
+      <CreateAdBanner />
 
     </div>
   );
