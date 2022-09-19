@@ -22,8 +22,8 @@ export function Home() {
 
   const navigation = useNavigation();
 
-  const handleOpenGame = () => {
-    navigation.navigate('game');
+  const handleOpenGame = ({ id, title, bannerUrl }: GameCardProps) => {
+    navigation.navigate('game', { id, title, bannerUrl });
   };
 
   return (
@@ -49,7 +49,7 @@ export function Home() {
           renderItem={({ item }) => (
             <GameCard
               data={item}
-              onPress={handleOpenGame}
+              onPress={() => handleOpenGame(item)}
             />
           )}
         />
