@@ -1,6 +1,6 @@
 import * as Notifications from 'expo-notifications';
 
-export const getNotificationToken = async () => {
+export const getPushNotificationToken = async () => {
   const { granted } = await Notifications.getPermissionsAsync();
 
   if (!granted) {
