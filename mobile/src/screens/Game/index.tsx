@@ -55,11 +55,11 @@ export function Game() {
 
         </View>
 
-          <Image
-            source={{ uri: game.bannerUrl }}
-            style={styles.cover}
-            resizeMode='cover'
-          />
+        <Image
+          source={{ uri: game.bannerUrl }}
+          style={styles.cover}
+          resizeMode='cover'
+        />
 
         <Heading
           title={game.title}
