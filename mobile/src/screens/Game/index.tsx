@@ -16,6 +16,7 @@ import { DuoCard, DuoCardProps } from  '../../components/DuoCard';
 
 export function Game() {
   const [duos, setDuos] = useState<DuoCardProps[]>([]);
+  const [discordDuoSelected, setDiscordDuoSelected] = useState('');
 
   useEffect(() => {
     fetch(`http://192.168.0.99:3001/games/${game.id}/ads`)
@@ -29,6 +30,12 @@ export function Game() {
 
   const handleGoBack = () => {
     navigation.goBack();
+  };
+
+  const getDicordUser = async (adsId: string) => {
+    fetch(`http://192.168.0.99:3001/ads/${adsId}/discord`)
+      .then((response) => response.json())
+      .then((data) => setDiscordDuoSelected(data.discord));
   };
 
   return (
