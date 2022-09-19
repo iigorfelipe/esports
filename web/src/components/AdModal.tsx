@@ -17,15 +17,32 @@ const CreateAdModal = () => {
       .then((response) => setGames(response.data))
   }, []);
 
-  const handleCreateAd = (event: FormEvent) => {
+  const handleCreateAd = async (event: FormEvent) => {
     event.preventDefault();
 
     const formData = new FormData(event.target as HTMLFormElement)
     const data = Object.fromEntries(formData);
 
-    console.log(data);
-    console.log(weekDays);
-    console.log(useVoiceChannel);
+    if (!data.name) {
+      return;
+    }
+
+    try {
+      axios.post(`http://localhost:3001/games/${data.game}/ads`, {
+        name: data.name,
+        yearsPlaying: Number(data.yearsPlaying),
+        discord: data.discord,
+        weekDays: weekDays.map(Number),
+        hourStart: data.hourStart,
+        hourEnd: data.hourEnd,
+        useVoiceChannel,
+      });
+
+      alert('Anúncio criado com sucesso!');
+    } catch (err) {
+      console.log(err);
+      alert('Erro ao criar anúncio!');
+    }
   }
 
   return (
