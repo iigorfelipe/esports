@@ -51,14 +51,14 @@ export function DuoCard({ data, onConect }: Props) {
         onPress={onConect}
       >
 
-      <GameController
-        color={THEME.COLORS.TEXT}
-        size={20}
-      />
+        <GameController
+          color={THEME.COLORS.TEXT}
+          size={20}
+        />
 
-      <Text style={styles.buttonTitle}>
-        Conectar
-      </Text>
+        <Text style={styles.buttonTitle}>
+          Conectar
+        </Text>
 
       </TouchableOpacity>
 
