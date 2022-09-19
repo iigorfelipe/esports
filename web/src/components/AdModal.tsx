@@ -2,11 +2,13 @@ import { Check, GameController } from 'phosphor-react';
 import Input from './Form/input';
 import * as Dialog from '@radix-ui/react-dialog';
 import * as Checkbox from '@radix-ui/react-checkbox';
+import * as ToggleGroup from '@radix-ui/react-toggle-group';
 import { useEffect, useState } from 'react';
 import { Game } from '../App';
 
 const CreateAdModal = () => {
   const [games, setGames] = useState<Game[]>([]);
+  const [weekDays, setWeekDays] = useState<string[]>([]);
 
   useEffect(() => {
     fetch('http://localhost:3001/games')
@@ -32,8 +34,9 @@ const CreateAdModal = () => {
               <select
                 id='game'
                 className='bg-zinc-900 py-2 px-4 rounded text-sm placeholder:text-zinc-500 appearance-none'
+                defaultValue=''
               >
-                <option disabled selected value="">Selecione o game que deseja jogar</option>
+                <option disabled value="">Selecione o game que deseja jogar</option>
                 {
                   games.map((game) => (
                     <option key={game.id} value={game.id}>
@@ -68,56 +71,110 @@ const CreateAdModal = () => {
               <div className='flex flex-col gap-2'>
                 <label htmlFor='weekDays'>Quando costuma jogar?</label>
 
-                <div className='grid grid-cols-4 gap-2'>
-                  <button
+                <ToggleGroup.Root
+                  type='multiple'
+                  className='grid grid-cols-4 gap-2'
+                  value={weekDays}
+                  onValueChange={setWeekDays}
+                >
+                  <ToggleGroup.Item
+                    value='0'
                     title='Domingo'
-                    className='w-6 h-6 rounded bg-zinc-900'
+                    className={
+                      `w-6 h-6 rounded ${
+                        weekDays.includes('0')
+                          ? 'bg-violet-500'
+                          : 'bg-zinc-900'
+                      }`
+                    }
                   >
                     D
-                  </button>
+                  </ToggleGroup.Item>
                   
-                  <button
+                  <ToggleGroup.Item
+                    value='1'
                     title='Segundo'
-                    className='w-6 h-6 rounded bg-zinc-900'
+                    className={
+                      `w-6 h-6 rounded ${
+                        weekDays.includes('1')
+                          ? 'bg-violet-500'
+                          : 'bg-zinc-900'
+                      }`
+                    }
                   >
                     S
-                  </button>
+                  </ToggleGroup.Item>
                   
-                  <button
+                  <ToggleGroup.Item
+                    value='2'
                     title='Terça'
-                    className='w-6 h-6 rounded bg-zinc-900'
+                    className={
+                      `w-6 h-6 rounded ${
+                        weekDays.includes('2')
+                          ? 'bg-violet-500'
+                          : 'bg-zinc-900'
+                      }`
+                    }
                   >
                     T
-                  </button>
+                  </ToggleGroup.Item>
                   
-                  <button
+                  <ToggleGroup.Item
+                    value='3'
                     title='Quarta'
-                    className='w-6 h-6 rounded bg-zinc-900'
+                    className={
+                      `w-6 h-6 rounded ${
+                        weekDays.includes('3')
+                          ? 'bg-violet-500'
+                          : 'bg-zinc-900'
+                      }`
+                    }
                   >
                     Q
-                  </button>
+                  </ToggleGroup.Item>
                   
-                  <button
+                  <ToggleGroup.Item
+                    value='4'
                     title='Quinta'
-                    className='w-6 h-6 rounded bg-zinc-900'
+                    className={
+                      `w-6 h-6 rounded ${
+                        weekDays.includes('4')
+                          ? 'bg-violet-500'
+                          : 'bg-zinc-900'
+                      }`
+                    }
                   >
                     Q
-                  </button>
+                  </ToggleGroup.Item>
                   
-                  <button
+                  <ToggleGroup.Item
+                    value='5'
                     title='Sexta'
-                    className='w-6 h-6 rounded bg-zinc-900'
+                    className={
+                      `w-6 h-6 rounded ${
+                        weekDays.includes('5')
+                          ? 'bg-violet-500'
+                          : 'bg-zinc-900'
+                      }`
+                    }
                   >
                     S
-                  </button>
+                  </ToggleGroup.Item>
                   
-                  <button
+                  <ToggleGroup.Item
+                    value='6'
                     title='Sábado'
-                    className='w-6 h-6 rounded bg-zinc-900'
+                    className={
+                      `w-6 h-6 rounded ${
+                        weekDays.includes('6')
+                          ? 'bg-violet-500'
+                          : 'bg-zinc-900'
+                      }`
+                    }
                   >
                     S
-                  </button>
-                </div>
+                  </ToggleGroup.Item>
+                </ToggleGroup.Root>
 
               </div>
 
@@ -133,7 +190,7 @@ const CreateAdModal = () => {
 
             </div>
 
-            <div className='mt-2 flex items-center gap-2 text-sm'>
+            <label className='mt-2 flex items-center gap-2 text-sm'>
               <Checkbox.Root className='w-6 h-6 p-1 rounded bg-zinc-900'>
 
                 <Checkbox.Indicator>
@@ -142,7 +199,7 @@ const CreateAdModal = () => {
 
               </Checkbox.Root>
               Costumo me conectar ao chat de voz
-            </div>
+            </label>
 
             <footer className='mt-2 flex justify-end gap-4'>
 
