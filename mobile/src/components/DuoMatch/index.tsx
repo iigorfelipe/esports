@@ -20,7 +20,7 @@ export function DuoMatch({ discord, onClose, ...rest }: Props) {
 
     Alert.alert(
       'Discord Copiado!',
-      'Usuário copiado para você colocar no discord e encontrar a pessoa.',
+      'Usuário copiado para você colocar no Discord.',
     );
   };
 
