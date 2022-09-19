@@ -11,6 +11,7 @@ import { THEME } from '../../theme';
 import { styles } from './styles';
 
 import { Heading } from '../../components/Heading';
+import { DuoMatch } from '../../components/DuoMatch';
 import { Background } from '../../components/Background';
 import { DuoCard, DuoCardProps } from  '../../components/DuoCard';
 
@@ -79,7 +80,7 @@ export function Game() {
           renderItem={({ item }) => (
             <DuoCard
               data={item}
-              onConect={() => {}}
+              onConect={() => getDicordUser(item.id)}
             />
           )}
           horizontal
@@ -95,6 +96,12 @@ export function Game() {
               Não há anúncios publicados ainda.
             </Text>
           )}
+        />
+
+        <DuoMatch
+          visible={discordDuoSelected.length > 0}
+          discord='zoro'
+          onClose={() => setDiscordDuoSelected('')}
         />
 
       </SafeAreaView>
