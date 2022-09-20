@@ -1,9 +1,6 @@
 <div align="center">
-  🔧  README IN DEVELOPMENT 🔧 
-  <img width="100%" src="https://octodex.github.com/images/manufacturetocat.png" />
+  <img width="260px" src="https://user-images.githubusercontent.com/87145566/191269623-49a6ee58-eb0b-4176-95dd-9c7006d12e4d.svg" />
 </div>
-
-<h1 align="center">e-Sports</h1>
 
 <p align="center">
   <i>
