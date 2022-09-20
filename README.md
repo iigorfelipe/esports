@@ -7,7 +7,7 @@
 
 <p align="center">
   <i>
-    Project developed during the 9th edition of the Next Level Week (NLW) held by Rocketseat with the e-Sports theme.
+    Project developed during the 9th edition of the Next Level Week (NLW) held by <a href="https://www.rocketseat.com.br/">Rocketseat</a> with the e-Sports theme.
   </i>
 </p>
 
