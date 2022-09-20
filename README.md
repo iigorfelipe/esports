@@ -11,6 +11,14 @@
   </i>
 </p>
 
+
+## Summary
+
+- [Images - Desktop](#images)
+- [Video - Mobile](#video)
+- [Technologies](#technologies)
+- [Development Tools](#development-tools)
+
 ## Technologies
 
 ### Frontend (desktop)
