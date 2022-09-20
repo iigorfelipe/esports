@@ -42,6 +42,25 @@
 
 ## Development Tools
 
-- Vscode
+- VScode
 - Prisma Studio
 - Postman
+
+## Images
+
+- Desktop
+
+<div>
+  <img src="https://user-images.githubusercontent.com/87145566/191150440-e4b2e4d4-1376-4262-ab18-42fde650af96.png" />
+  <img src="https://user-images.githubusercontent.com/87145566/191150449-e5a348e8-c81d-41f3-9448-b29a15d477f0.png" />
+</div>
+
+## Video
+
+- Mobile
+
+<div align="center">
+  <video src="https://user-images.githubusercontent.com/87145566/191153617-3fdc437a-601c-49d5-9fa0-1bf42df55484.mp4" autoplay>
+    Desculpa, o seu navegador não suporta vídeos incorporados
+  </video>
+</div>
