@@ -5,12 +5,8 @@ import * as H from './helpers';
  
 const app = express();
 
-const corsOptions = {
-  origin: 'https://nlwesports.netlify.app' || 'https://esports-backend.herokuapp.com'
-};
-
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(cors());
 
 const prisma = new PrismaClient({
   log: ['query']
