@@ -20,7 +20,7 @@ const App = () => {
   const [games, setGames] = useState<Game[]>([]);
 
   useEffect(() => {
-    axios('http://localhost:3001/games')
+    axios('https://esports-backend.herokuapp.com/games')
       .then((response) => setGames(response.data))
   }, []);
 

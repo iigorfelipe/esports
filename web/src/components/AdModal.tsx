@@ -13,7 +13,7 @@ const CreateAdModal = () => {
   const [useVoiceChannel, setUseVoiceChannel] = useState(false);
 
   useEffect(() => {
-    axios('http://localhost:3001/games')
+    axios('https://esports-backend.herokuapp.com/games')
       .then((response) => setGames(response.data))
   }, []);
 
@@ -28,7 +28,7 @@ const CreateAdModal = () => {
     }
 
     try {
-      axios.post(`http://localhost:3001/games/${data.game}/ads`, {
+      axios.post(`https://esports-backend.herokuapp.com/games/${data.game}/ads`, {
         name: data.name,
         yearsPlaying: Number(data.yearsPlaying),
         discord: data.discord,
