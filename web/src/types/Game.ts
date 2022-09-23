@@ -6,3 +6,9 @@ export interface Game {
     ads: number;
   }
 }
+
+export interface GameBannerProps {
+  bannerUrl: string;
+  adsCount: number,
+  title: string,
+}
