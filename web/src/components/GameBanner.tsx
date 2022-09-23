@@ -1,14 +1,9 @@
-interface GameBannerProps {
-  bannerUrl: string;
-  adsCount: number,
-  title: string,
-}
+import { GameBannerProps } from '../types/Game';
 
 const GameBanner = ({ bannerUrl, adsCount, title }: GameBannerProps) => {
   return (
-    <a href='' className='relative rounded-lg overflow-hidden'>
-
-      <img src={bannerUrl} alt="" />
+    <div className='relative rounded-lg overflow-hidden hover:cursor-pointer'>
+      <img src={bannerUrl} alt='' />
 
       <div className='w-full pt-16 pb-4 px-4 bg-gameGradient absolute bottom-0 left-0 right-0'>
 
@@ -21,8 +16,8 @@ const GameBanner = ({ bannerUrl, adsCount, title }: GameBannerProps) => {
         </span>
 
       </div>
-    </a>
+    </div>
   )
 };
 
-export default GameBanner
+export default GameBanner;
