@@ -8,7 +8,7 @@ import Games from '../components/Games';
 
 const Home = () => {
   return (
-    <div className='max-w-[1366px] mx-auto flex flex-col items-center px-4 sm:px-8 md:px-10 my-10 mb-20'>
+    <div className='max-w-[1366px] mx-auto flex flex-col items-center px-4 sm:px-8 md:px-10 my-10 mb-2'>
 
       <img src={logoImg} alt='' />
 
