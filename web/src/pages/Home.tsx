@@ -12,7 +12,7 @@ const Home = () => {
 
       <img src={logoImg} alt='' />
 
-      <h1 className='text-3xl font-black text-white lg:text-6xl mt-2'>
+      <h1 className='text-6xl font-black text-white my-5'>
         Seu <span className='text-transparent bg-nlwGradient bg-clip-text'>duo</span> está aqui.
       </h1>
 
