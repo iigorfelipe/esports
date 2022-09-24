@@ -25,10 +25,9 @@ const Games = () => {
     >
       {
         games.map(({ id, bannerUrl, title, _count: { ads } }) => (
-          <SwiperSlide>
+          <SwiperSlide key={id}>
 
             <GameBanner
-              key={id} 
               bannerUrl={bannerUrl}
               adsCount={ads}
               title={title}
