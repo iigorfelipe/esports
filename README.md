@@ -59,7 +59,7 @@
 - Desktop
 
 <div>
-  <img src="https://user-images.githubusercontent.com/87145566/191150440-e4b2e4d4-1376-4262-ab18-42fde650af96.png" />
+  <img src="https://user-images.githubusercontent.com/87145566/192120302-aa06045f-6794-4c5e-a762-aec38cc98326.png" />
   <img src="https://user-images.githubusercontent.com/87145566/191150449-e5a348e8-c81d-41f3-9448-b29a15d477f0.png" />
 </div>
 
