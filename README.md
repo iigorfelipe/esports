@@ -46,7 +46,7 @@
 - TypeScript
 - Node.js
 - Express.js
-- SQLite
+- MySQL
 - Prisma
 
 ## Development Tools
