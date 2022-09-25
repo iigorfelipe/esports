@@ -30,6 +30,7 @@
 - Tailwindcss
 - Phosphor
 - Axios
+- Nuka Carousel
 
 ### Mobile
 
