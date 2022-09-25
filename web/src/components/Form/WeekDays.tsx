@@ -10,7 +10,10 @@ type Props = {
 const WeekDays = ({ weekDays, setWeekDays }: Props) => {
   return (
     <div className='flex flex-col gap-2'>
-      <label htmlFor='weekDays'>Quando costuma jogar?</label>
+
+      <label htmlFor='weekDays'>
+        Quando costuma jogar?
+      </label>
 
       <ToggleGroup.Root
         type='multiple'
