@@ -1,4 +1,12 @@
 <div align="center">
+
+  [Technologies](#technologies) | [Development Tools](#development-tools) | [Images (Desktop)](#images) | [Video (Mobile)](#video)
+
+</div>
+
+<br />
+
+<div align="center">
   <img width="260px" src="https://user-images.githubusercontent.com/87145566/191269623-49a6ee58-eb0b-4176-95dd-9c7006d12e4d.svg" />
 </div>
 
@@ -10,14 +18,6 @@
     Project developed during the 9th edition of the Next Level Week (NLW) held by <a href="https://www.rocketseat.com.br/">Rocketseat</a> with the e-Sports theme.
   </i>
 </p>
-
-
-## Summary
-
-- [Images - Desktop](#images)
-- [Video - Mobile](#video)
-- [Technologies](#technologies)
-- [Development Tools](#development-tools)
 
 ## Technologies
 
@@ -59,8 +59,8 @@
 - Desktop
 
 <div>
-  <img src="https://user-images.githubusercontent.com/87145566/191150440-e4b2e4d4-1376-4262-ab18-42fde650af96.png" />
-  <img src="https://user-images.githubusercontent.com/87145566/191150449-e5a348e8-c81d-41f3-9448-b29a15d477f0.png" />
+  <img src="https://user-images.githubusercontent.com/87145566/192120302-aa06045f-6794-4c5e-a762-aec38cc98326.png" />
+  <img src="https://user-images.githubusercontent.com/87145566/192146150-dd2c85a0-9d37-4015-b17d-b5ba4d11b90a.png" />
 </div>
 
 ## Video
