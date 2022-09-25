@@ -44,7 +44,7 @@ const Form = () => {
   }
 
   return (
-    <form onSubmit={handleCreateAd} className='mt-4 flex flex-col gap-4'>
+    <form onSubmit={handleCreateAd} className='mt-4 flex flex-col gap-3'>
 
       <SelectGame />
 

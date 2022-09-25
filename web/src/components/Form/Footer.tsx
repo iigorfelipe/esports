@@ -3,7 +3,7 @@ import { GameController } from 'phosphor-react';
 
 const Footer = () => {
   return (
-    <footer className='mt-2 flex justify-end gap-4'>
+    <footer className='mt-1 flex justify-end gap-4'>
 
       <Dialog.Close
         type='button'

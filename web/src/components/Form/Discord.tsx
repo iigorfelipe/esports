@@ -2,7 +2,7 @@ import Input from "./Input";
 
 const Discord = () => {
   return (
-    <div className='flex flex-col gap-2'>
+    <div className='flex flex-col gap-1'>
 
       <label htmlFor='discord'>
         Qual seu Discord?

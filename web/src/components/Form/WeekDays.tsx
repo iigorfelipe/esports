@@ -28,7 +28,7 @@ const WeekDays = ({ weekDays, setWeekDays }: Props) => {
               value={value}
               title={title}
               className={
-                `w-10 h-6 rounded ${
+                `w-12 h-6 rounded ${
                   weekDays.includes(value)
                     ? 'bg-violet-500'
                     : 'bg-zinc-900'
