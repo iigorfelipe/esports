@@ -60,7 +60,7 @@
 
 <div>
   <img src="https://user-images.githubusercontent.com/87145566/192120302-aa06045f-6794-4c5e-a762-aec38cc98326.png" />
-  <img src="https://user-images.githubusercontent.com/87145566/191150449-e5a348e8-c81d-41f3-9448-b29a15d477f0.png" />
+  <img src="https://user-images.githubusercontent.com/87145566/192146150-dd2c85a0-9d37-4015-b17d-b5ba4d11b90a.png" />
 </div>
 
 ## Video
