@@ -5,14 +5,8 @@ import * as H from './helpers';
  
 const app = express();
 
-const corsOptions ={
-  origin: '*', 
-  credentials: true,
-  optionSuccessStatus: 200,
-}
-
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(cors());
 
 const prisma = new PrismaClient({
   log: ['query']
