@@ -100,4 +100,4 @@ app.get('/ads/:id/discord', async (req, res) => {
   });
 });
 
-app.listen(process.env.PORT || 3002);
+app.listen(process.env.PORT || 3001);
